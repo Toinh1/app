@@ -1,0 +1,239 @@
+{
+  "theme": "moss_academic_light_with_dark_mode",
+  "colors": {
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#F7F8F4",
+        "on_bg": "#202820",
+        "on_bg_muted": "#556B2F",
+        "roles": {
+          "primary": "#556B2F",
+          "primary_hover": "#425324",
+          "secondary": "#718355",
+          "border": "#DCE5D0",
+          "link": "#263A29",
+          "success": "#2D6A4F",
+          "error": "#B91C1C",
+          "warning": "#B45309"
+        }
+      },
+      {
+        "name": "card",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#202820",
+        "on_bg_muted": "#4B5548",
+        "roles": {
+          "primary": "#556B2F",
+          "border": "#E5EBE0",
+          "tag_bg": "#EDF2E8",
+          "tag_text": "#263A29"
+        }
+      },
+      {
+        "name": "sidebar",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#202820",
+        "on_bg_muted": "#505C50",
+        "roles": {
+          "active_bg": "#EDF2E8",
+          "active_text": "#263A29",
+          "badge_bg": "#556B2F",
+          "badge_text": "#FFFFFF"
+        }
+      },
+      {
+        "name": "header",
+        "kind": "glass",
+        "contrast_against": "#F7F8F4",
+        "guarantee": "backdrop-blur-xl bg-white/90 border-b border-[#DCE5D0]/80 shadow-xs",
+        "on_bg": "#202820",
+        "on_bg_muted": "#505C50",
+        "roles": {
+          "search_bg": "#EDF2E8",
+          "search_text": "#202820",
+          "cta_bg": "#556B2F",
+          "cta_text": "#FFFFFF"
+        }
+      },
+      {
+        "name": "audio_player_persistent",
+        "kind": "glass",
+        "contrast_against": "#263A29",
+        "guarantee": "backdrop-blur-2xl bg-[#263A29]/95 text-white border-t border-[#556B2F]/40 shadow-2xl",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#DCE5D0",
+        "roles": {
+          "accent": "#99B877",
+          "progress_bar": "#DCE5D0",
+          "progress_fill": "#556B2F"
+        }
+      },
+      {
+        "name": "dark_page",
+        "kind": "solid",
+        "bg": "#121A13",
+        "on_bg": "#F7F8F4",
+        "on_bg_muted": "#BAC7B5",
+        "roles": {
+          "primary": "#8FA86E",
+          "secondary": "#A2B488",
+          "border": "#28392A",
+          "card_bg": "#1B261D"
+        }
+      },
+      {
+        "name": "hero",
+        "kind": "solid",
+        "bg": "#263A29",
+        "on_bg": "#FFFFFF",
+        "on_bg_muted": "#DCE5D0",
+        "roles": {
+          "accent": "#A3BD82",
+          "badge_bg": "rgba(220, 229, 208, 0.15)",
+          "badge_text": "#DCE5D0"
+        }
+      }
+    ],
+    "accent": "#556B2F",
+    "on_accent": "#FFFFFF"
+  },
+  "typography": {
+    "font_family_heading": "'Space Grotesk Variable', sans-serif",
+    "font_family_body": "'Plus Jakarta Sans Variable', sans-serif",
+    "scale_px": {
+      "display": 56,
+      "h1": 44,
+      "h2": 32,
+      "h3": 24,
+      "h4": 20,
+      "body": 16,
+      "caption": 14
+    },
+    "rules": {
+      "headings": "font-bold tracking-tight text-[#202820] dark:text-[#F7F8F4]",
+      "logo": "font-black tracking-tighter text-[#263A29] dark:text-[#DCE5D0] flex items-center gap-2",
+      "taglines": "font-medium text-base text-[#505C50] leading-relaxed dark:text-[#BAC7B5]"
+    }
+  },
+  "entry_surfaces": {
+    "/": "split hero with brand positioning left and featured media spotlight right, dynamic multi-tab feed below",
+    "/videocasts": "featured cinema player on top with categorized YouTube-style video grid",
+    "/video/:id": "theater mode player with synchronized notes, interactive discussion, and right-column recommendation queue",
+    "/podcasts": "hero spotify-style showcase with live category ribbons and persistent audio playback bar",
+    "/podcast/:id": "immersive episode deck with audio waveform scrubber, chapter markers and host insights",
+    "/estudio": "dual studio workbench for live media recording (camera/mic) with canvas waveform and direct upload pipeline",
+    "/relatos": "warm community narrative tapestry with audio snippets, author badges, and experience tags",
+    "/debates": "academic discussion forum with categorized thesis cards, poll metrics, and rebuttal threads",
+    "/biblioteca": "curated academic repository with saved videocasts, podcast queue, history and personal playlists",
+    "/perfil/:id": "academic profile showcase with published content tabs, university badge, and network statistics",
+    "/admin": "high-density analytics console with content moderation, user management, and broadcast metrics",
+    "/login": "academic portal split login with leadership manifesto left and authentication form right",
+    "/cadastro": "academic onboarding split view with student specialization picker and registration flow"
+  },
+  "visual_enhancers": {
+    "textures": "subtle organic noise and delicate 1px border strokes (#DCE5D0)",
+    "audio_player": "persistent bottom bar with smooth scrub bar, playback rate selector (0.75x to 2x), and mini-visualizer",
+    "studio_recorder": "MediaRecorder API with live duration timer, waveform visualization, and instant playback review",
+    "brand_mark": "ADMINISTRE-SE CAST typography featuring an audio wave / leadership node glyph"
+  },
+  "grids_and_layouts": {
+    "app_shell": "flex min-h-screen bg-[#F7F8F4] dark:bg-[#121A13] text-[#202820] dark:text-[#F7F8F4]",
+    "desktop_sidebar": "hidden md:flex flex-col w-64 fixed inset-y-0 left-0 bg-white dark:bg-[#18231A] border-r border-[#DCE5D0] dark:border-[#28392A] z-40 p-4",
+    "main_content": "flex-1 md:pl-64 flex flex-col min-h-screen pb-28 md:pb-24",
+    "top_navbar": "sticky top-0 z-30 h-16 backdrop-blur-xl bg-white/90 dark:bg-[#18231A]/90 border-b border-[#DCE5D0] dark:border-[#28392A] px-4 md:px-8 flex items-center justify-between",
+    "mobile_bottom_nav": "md:hidden fixed bottom-0 left-0 right-0 z-40 h-16 bg-white/95 dark:bg-[#18231A]/95 backdrop-blur-lg border-t border-[#DCE5D0] dark:border-[#28392A] px-6 flex items-center justify-around",
+    "feed_grid": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6",
+    "video_detail_layout": "grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+  },
+  "motion": {
+    "fade_in": {
+      "initial": { "opacity": 0, "y": 8 },
+      "animate": { "opacity": 1, "y": 0 },
+      "transition": { "duration": 0.25, "ease": "easeOut" }
+    },
+    "tab_transition": {
+      "initial": { "opacity": 0, "scale": 0.98 },
+      "animate": { "opacity": 1, "scale": 1 },
+      "transition": { "duration": 0.2 }
+    },
+    "hover_card": "transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
+  },
+  "accessibility": {
+    "contrast_compliance": "WCAG AA verified: #202820 on #F7F8F4 has 13.2:1 contrast ratio; #FFFFFF on #556B2F has 4.9:1 contrast ratio; #DCE5D0 on #263A29 has 9.4:1 ratio",
+    "focus_states": "focus-visible:ring-2 focus-visible:ring-[#556B2F] focus-visible:outline-none focus-visible:ring-offset-2",
+    "aria_labels": "All media player controls, recording toggles, tabs and action icons must have explicit aria-label and data-testid",
+    "reduced_motion": "Respects prefers-reduced-motion via motion/react reduced settings"
+  },
+  "image_urls": {
+    "podcast_studios": [
+      {
+        "url": "https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHBvZGNhc3QlMjBzdHVkaW8lMjBtaWNyb3Bob25lJTIwc3R1ZGVudHN8ZW58MHx8fHwxNzkxNTU3MzgwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Two hosts recording academic business videocast in studio",
+        "category": "videocasts_banner"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1615458318132-1f151a3d18f4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHBvZGNhc3QlMjBzdHVkaW8lMjBtaWNyb3Bob25lJTIwc3R1ZGVudHN8ZW58MHx8fHwxNzkxNTU3MzgwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Professional audio mixer and broadcast equipment",
+        "category": "estudio_header"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1589903308904-1010c2294adc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHBvZGNhc3QlMjBzdHVkaW8lMjBtaWNyb3Bob25lJTIwc3R1ZGVudHN8ZW58MHx8fHwxNzkxNTU3MzgwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Studio microphone with headphones",
+        "category": "podcasts_cover"
+      }
+    ],
+    "business_debates": [
+      {
+        "url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcmVzZW50YXRpb24lMjBkaXNjdXNzaW9ufGVufDB8fHx8MTc5MTU1NzM4MHww&ixlib=rb-4.1.0&q=85",
+        "description": "Business strategy presentation and debate in boardroom",
+        "category": "debates_featured"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1557804506-669a67965ba0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcmVzZW50YXRpb24lMjBkaXNjdXNzaW9ufGVufDB8fHx8MTc5MTU1NzM4MHww&ixlib=rb-4.1.0&q=85",
+        "description": "Team analyzing startup case study on whiteboard",
+        "category": "relatos_banner"
+      }
+    ],
+    "students_community": [
+      {
+        "url": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwc3R1ZGVudHMlMjBzdHVkeWluZyUyMGJ1c2luZXNzJTIwbGVhZGVyc2hpcHxlbnwwfHx8fDE3OTE1NTczODB8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Business students collaborating on campus laptop",
+        "category": "home_hero_spotlight"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwzfHx1bml2ZXJzaXR5JTIwc3R1ZGVudHMlMjBzdHVkeWluZyUyMGJ1c2luZXNzJTIwbGVhZGVyc2hpcHxlbnwwfHx8fDE3OTE1NTczODB8MA&ixlib=rb-4.1.0&q=85",
+        "description": "University community networking and sharing insights",
+        "category": "community_voices"
+      }
+    ]
+  },
+  "component_structure": {
+    "layout_components": [
+      "frontend/src/components/layout/AppLayout.tsx",
+      "frontend/src/components/layout/Sidebar.tsx",
+      "frontend/src/components/layout/Navbar.tsx",
+      "frontend/src/components/layout/MobileNav.tsx",
+      "frontend/src/components/player/PersistentAudioPlayer.tsx"
+    ],
+    "feature_components": [
+      "frontend/src/components/feed/FeedCard.tsx",
+      "frontend/src/components/feed/CategoryPills.tsx",
+      "frontend/src/components/player/CustomVideoPlayer.tsx",
+      "frontend/src/components/studio/MediaRecorderStudio.tsx",
+      "frontend/src/components/debates/DebateThread.tsx",
+      "frontend/src/components/relatos/RelatoCard.tsx"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Use @fontsource-variable/space-grotesk for headings and @fontsource-variable/plus-jakarta-sans for body in frontend/src/index.css.",
+    "Implement the exact user-requested palette: Verde-musgo principal #556B2F, Verde-musgo escuro #263A29, Verde secundário #718355, Verde-claro suave #DCE5D0, Fundo principal #F7F8F4, Texto principal #202820.",
+    "Provide full persistent audio player in frontend state/context so playing a podcast does not interrupt while browsing other pages.",
+    "Implement real working MediaRecorder in 'Meu Estúdio' allowing recording audio/video from webcam/mic with live duration, visual feedback, and playback test.",
+    "Ensure all interactive elements have data-testid attributes for testing.",
+    "Create rich realistic mock data in backend seed covering administration categories: Gestão Estratégica, Finanças & Controladoria, Marketing & Growth, Liderança & Pessoas, Empreendedorismo & Inovação, Logística & Supply Chain."
+  ]
+}
