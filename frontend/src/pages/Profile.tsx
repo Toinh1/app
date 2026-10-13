@@ -70,6 +70,7 @@ export default function Profile() {
 
   const p = profile.data;
   const visibleTabs = TABS.filter((t) => t.value !== "drafts" || isMe);
+  const publicationItems = publications.data?.items ?? [];
 
   return (
     <div className="space-y-7">
@@ -185,7 +186,7 @@ export default function Profile() {
               )
             ) : publications.isLoading ? (
               <SkeletonGrid count={4} />
-            ) : (publications.data?.items.length ?? 0) === 0 ? (
+            ) : publicationItems.length === 0 ? (
               <EmptyState
                 icon={Inbox}
                 title={t.value === "drafts" ? "Nenhum rascunho salvo" : "Nenhuma publicação nesta aba"}
@@ -202,7 +203,7 @@ export default function Profile() {
               />
             ) : (
               <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3" data-testid="profile-publications">
-                {publications.data!.items.map((pub) => (
+                {publicationItems.map((pub) => (
                   <PublicationCard key={pub.id} pub={pub} />
                 ))}
               </div>

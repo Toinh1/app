@@ -14,15 +14,27 @@ farm-ts/
   tests/     Playwright e2e workspace (pre-scaffolded)
 ```
 
-## Running
+## Running locally
 
-Two separate processes, managed by supervisor in the pod (see "Pod conventions"
-below); to run them by hand from two terminals instead:
+This version runs entirely in the browser. There is no backend, MongoDB, Docker,
+or external API required. Accounts and application data are persisted in the
+browser's `localStorage`:
 
-```bash
-cd backend && uvicorn server:app --host 0.0.0.0 --port 8001 --reload   # http://localhost:8001
-cd frontend && yarn dev                                                # http://localhost:3000
+| Perfil | E-mail | Senha |
+| --- | --- | --- |
+| Estudante | `ana@demo.com` | `Demo@2025` |
+| Administrador | `admin@administrase.com` | `Admin@2025` |
+
+From PowerShell, run:
+
+```powershell
+cd app\frontend
+npm install
+npm run dev
 ```
+
+Open `http://localhost:3000/login`. The demo accounts are available immediately
+and all changes remain local to this browser.
 
 ## The `/api` proxy convention
 

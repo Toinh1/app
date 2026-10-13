@@ -42,6 +42,11 @@ export default function Home() {
 
   const hero = explore.data?.featured?.[0];
   const spotlight = explore.data?.featured?.slice(1, 4) ?? [];
+  const feedItems = feed.data?.items.filter((pub) => !pub.is_demo) ?? [];
+  const realCreatorIds = new Set(
+    (explore.data?.recent ?? []).filter((pub) => !pub.is_demo).map((pub) => pub.author_id),
+  );
+  const creators = (explore.data?.creators ?? []).filter((creator) => realCreatorIds.has(creator.id));
 
   return (
     <div className="space-y-10">
@@ -137,7 +142,7 @@ export default function Home() {
             title="Não foi possível carregar o feed"
             description="Verifique sua conexão e tente novamente em instantes."
           />
-        ) : (feed.data?.items.length ?? 0) === 0 ? (
+        ) : feedItems.length === 0 ? (
           tab === "following" ? (
             <EmptyState
               icon={UserPlus}
@@ -155,7 +160,7 @@ export default function Home() {
         ) : (
           <>
             <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3" data-testid="feed-grid">
-              {feed.data!.items.map((pub) => (
+              {feedItems.map((pub) => (
                 <PublicationCard key={pub.id} pub={pub} />
               ))}
             </div>
@@ -176,13 +181,13 @@ export default function Home() {
       </section>
 
       {/* creators */}
-      {(explore.data?.creators.length ?? 0) > 0 && (
+      {creators.length > 0 && (
         <section className="space-y-4">
           <h2 className="flex items-center gap-2 font-heading text-xl font-bold">
             <TrendingUp className="h-5 w-5 text-primary" /> Criadores em destaque
           </h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {explore.data!.creators.slice(0, 6).map((creator) => (
+            {creators.slice(0, 6).map((creator) => (
               <Link
                 key={creator.id}
                 to={`/perfil/${creator.id}`}

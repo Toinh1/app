@@ -1,8 +1,8 @@
 // Session cache: `me` lives in the ["me"] query; beginSession/endSession keep the cache honest.
 import { useQuery } from "@tanstack/react-query";
-import { ApiError, apiGet, apiPost } from "./api";
+import { ApiError, apiGet } from "./api";
 import { queryClient } from "./queryClient";
-import type { MessageOut, UserOut } from "./types";
+import type { UserOut } from "./types";
 
 export async function fetchMe(): Promise<UserOut | null> {
   try {
@@ -30,9 +30,6 @@ export function beginSession() {
 // Every sign-out control must go through here: wipes the cache so the next
 // login on this browser never sees the previous account's data.
 export async function endSession() {
-  try {
-    await apiPost<MessageOut>("/auth/logout");
-  } finally {
-    queryClient.clear();
-  }
+  localStorage.removeItem("administrase-cast-local-session");
+  queryClient.clear();
 }
